@@ -1,0 +1,14 @@
+Drug_Name,Drug.therapeutic.score,P.value,FDR,Primary_Mechanism_of_Action
+vorinostat,0.370128532,2.27E-17,1.93E-15,Histone Deacetylase (HDAC) Inhibitor
+everolimus,0.188133554,1.09E-08,3.10E-07,mTOR Kinase Inhibitor (mTORC1)
+daunorubicin,0.175703857,3.07E-08,6.52E-07,Topoisomerase II Inhibitor and DNA Intercalator
+tretinoin,0.158207262,7.07E-10,3.00E-08,Retinoic Acid Receptor (RAR) Agonist
+sirolimus,0.149541916,7.82E-05,0.000949903,mTOR Kinase Inhibitor
+curcumin,0.130553205,2.36E-05,0.000334662,NF-kB and COX-2 Inhibitor
+perhexiline,0.123201336,1.04E-06,1.78E-05,Carnitine Palmitoyltransferase-1 (CPT-1) Inhibitor
+calcitriol,0.112320637,0.000302407,0.003213078,Vitamin D Receptor (VDR) Agonist
+nicardipine,0.099973876,0.000882358,0.007500047,L-type Calcium Channel Blocker
+rucaparib,0.092537923,0.004702204,0.030745179,Poly(ADP-ribose) Polymerase (PARP) Inhibitor
+itraconazole,0.080615853,0.004095843,0.029012219,Lanosterol 14-alpha-demethylase (CYP51) Inhibitor
+iloprost,0.078622654,0.002015643,0.015575422,Prostacyclin (PGI2) Receptor Agonist
+parthenolide,0.060087838,0.000345778,0.003265679,NF-kB Inhibitor (IKK Inhibitor)
