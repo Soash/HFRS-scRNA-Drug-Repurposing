@@ -12,7 +12,7 @@
 
 ---
 
-## 📌 Abstract & Overview
+## Abstract & Overview
 
 * **Objective:** Hemorrhagic Fever with Renal Syndrome (HFRS) lacks targeted FDA-approved therapeutics. This study aims to identify novel therapeutic candidates capable of reversing the pathogenic transcriptomic signatures of HFRS, specifically targeting the abnormal presence of circulating Nucleated Red Blood Cells (NRBCs) and multilineage immune dysregulation.
 * **Methodology:** We obtained peripheral blood mononuclear cell (PBMC) single-cell RNA sequencing (scRNA-seq) data from hospitalized HFRS patients and healthy controls. Utilizing **Seurat v5** for Canonical Correlation Analysis (CCA) data integration and the **ASGARD** (A Single-cell Guided Pipeline to Aid Repurposing of Drugs) computational framework, we extracted cluster-specific differential expression profiles and queried them against the **LINCS L1000** pharmacogenomic database across hematopoietic and lymphoid lineages.
@@ -21,7 +21,7 @@
 
 ---
 
-## 🔬 Biological Background & Motivation
+## Biological Background & Motivation
 
 Hemorrhagic Fever with Renal Syndrome (HFRS) is a life-threatening rodent-borne zoonosis caused by Old World hantaviruses, prominently **Hantaan virus (HTNV)**. Clinical progression traverses five distinct phases: *febrile, hypotensive, oliguric, polyuric,* and *convalescent*. During the oliguric phase, acute kidney injury (AKI) peaks, frequently culminating in pulmonary edema, hemorrhage, and multi-organ failure.
 
@@ -50,7 +50,7 @@ Vascular Hyper-Permeability  Bone Marrow Erythropoietic Stress
 
 ---
 
-## 🛠️ Computational Pipeline Architecture
+## Computational Pipeline Architecture
 
 ```mermaid
 flowchart TD
@@ -66,7 +66,7 @@ flowchart TD
 
     subgraph P3 ["Phase 3: Pharmacogenomic Drug Repurposing"]
         direction LR
-        F["<b>3_differential_expression.R</b><br/>Cluster-Specific Disease vs Normal DEGs"] --> G["<b>4_asgard_hfrs.R: ASGARD Pipeline</b><br/>LINCS L1000 Screen & K-S Enrichment"] --> H["<b>Prioritized Drug Candidates</b><br/>★ Vorinostat & ★ Tretinoin"]
+        F["<b>3_differential_expression.R</b><br/>Cluster-Specific Disease vs Normal DEGs"] --> G["<b>4_asgard_hfrs.R: ASGARD Pipeline</b><br/>LINCS L1000 Screen & K-S Enrichment"] --> H["<b>Prioritized Drug Candidates</b><br/>Vorinostat & Tretinoin"]
     end
 
     P1 ==> P2 ==> P3
@@ -74,7 +74,7 @@ flowchart TD
 
 ---
 
-## 📊 Key Findings
+## Key Findings
 
 ### 1. Cellular Distribution & Composition Remodeling
 
@@ -136,7 +136,7 @@ Querying single-cell signatures against the **LINCS L1000** hematopoietic/lympho
 
 ---
 
-## 📂 Repository Organization
+## Repository Organization
 
 ```text
 .
@@ -167,7 +167,7 @@ Querying single-cell signatures against the **LINCS L1000** hematopoietic/lympho
 
 ---
 
-## ⚙️ Installation & Prerequisites
+## Installation & Prerequisites
 
 This pipeline requires **R (>= 4.1.0)**. Ensure sufficient computational memory (recommended $\ge$ 32GB RAM for CCA integration).
 
@@ -189,7 +189,7 @@ devtools::install_github("lanagarmire/ASGARD")
 
 ---
 
-## 🚀 Reproduction Walkthrough
+## Reproduction Walkthrough
 
 ### Step 1: Data Acquisition
 Download the raw 10X Genomics matrix files from NCBI GEO:
@@ -221,14 +221,14 @@ Rscript R/4_asgard_hfrs.R
 
 ---
 
-## ✒️ Citation & Authorship
+## Citation & Authorship
 
 If you use this pipeline, analysis code, or findings in your research, please cite:
 
 > **Md Abu Sadat Soash** (2026). *scRNA-seq Guided In Silico Drug Repurposing Identifies Candidate Therapeutics for Hemorrhagic Fever with Renal Syndrome.* Department of Genetic Engineering and Biotechnology, Shahjalal University of Science and Technology, Sylhet, Bangladesh.  
 > GitHub: [https://github.com/Soash/hfrs-scrna-drug-repurposing](https://github.com/Soash/hfrs-scrna-drug-repurposing)
 
-### ✉️ Contact
+### Contact
 **Md Abu Sadat Soash**  
 Department of Genetic Engineering and Biotechnology, Shahjalal University of Science and Technology  
 Email: [mdabu13@student.sust.edu](mailto:mdabu13@student.sust.edu)
