@@ -50,13 +50,16 @@ Vascular Hyper-Permeability  Bone Marrow Erythropoietic Stress
 
 ```mermaid
 flowchart TD
-    A["Raw scRNA-seq (GEO: GSE161354)<br/>8 Samples (6 HFRS, 2 Normal)"] --> B["1_qc.R<br/>Quality Control & Filtering<br/>nFeature > 200, percent.mt < 20%<br/>Mitochondrial Gene Purging"]
-    B --> C["2.1_integration.R<br/>Seurat v5 CCA Integration<br/>Log-Normalization & Scaling<br/>PCA & Graph-Based Clustering (res=0.5)"]
-    C --> D["2.2_cell_type_annotation.R<br/>Cluster Marker Identification (Wilcoxon)<br/>Mapping 20 Clusters to Biological Lineages<br/>Identification of Cluster 17 as NRBCs"]
-    D --> E["2.3 & 2.4.R<br/>Cellular Distribution & Dynamic Composition<br/>Quantifying Proliferation & NRBC Shifts"]
-    E --> F["3_differential_expression.R<br/>Cluster-Specific DEG Extraction<br/>Disease vs Normal per Cluster<br/>Tailored Baseline for NRBCs"]
-    F --> G["4_asgard_hfrs.R<br/>ASGARD Multi-Cluster Pipeline<br/>LINCS L1000 Hematopoietic Screening<br/>Kolmogorov-Smirnov Testing & Drug Scoring"]
-    G --> H["Prioritized Repurposing Candidates<br/>Vorinostat & Tretinoin"]
+    classDef wideBox fill:#f8f9fa,stroke:#3b82f6,stroke-width:2px,color:#1e293b,rx:8px,ry:8px,min-width:460px,padding:14px 20px
+
+    A["<b>Phase 0: Raw Dataset Acquisition (GEO: GSE161354)</b><br/>8 PBMC Samples: 6 Acute HFRS Patients (Y04, Y06, Y07, Y15, Y16, Y26) vs 2 Healthy Controls (YYZ, YTK)"]:::wideBox
+    --> B["<b>Phase 1: Quality Control & Filtering (1_qc.R)</b><br/>Static Thresholds (nFeature_RNA > 200, percent.mt < 20%) & Complete Purging of Mitochondrial Transcripts"]:::wideBox
+    --> C["<b>Phase 2.1: Data Integration & Dimensionality Reduction (2.1_integration.R)</b><br/>Log-Normalization, Seurat v5 Canonical Correlation Analysis (CCA), PCA, and Graph Clustering (res=0.5)"]:::wideBox
+    --> D["<b>Phase 2.2: Lineage Identification & Annotation (2.2_cell_type_annotation.R)</b><br/>Wilcoxon Rank-Sum Cluster Markers (lnFC > 0.25) & Resolution of Cluster 17 as Circulating NRBCs (AHSP, HBA, HBB)"]:::wideBox
+    --> E["<b>Phase 2.3–2.5: Cellular Distribution Dynamics (2.3_cluster_distribution.R, 2.4.R)</b><br/>Quantifying Proliferation Burst (Cycling Cells 1.43% → 22.16%) & Pathological NRBC Spillover (0.08% → 1.14%)"]:::wideBox
+    --> F["<b>Phase 3: Cluster-Specific Differential Expression (3_differential_expression.R)</b><br/>Disease vs Normal Wilcoxon Testing per Cluster (lnFC > 0.1, min.pct > 0.1) & Tailored NRBC vs Global Healthy Baseline"]:::wideBox
+    --> G["<b>Phase 4: ASGARD Pharmacogenomic Repurposing (4_asgard_hfrs.R)</b><br/>LINCS L1000 Hematopoietic/Lymphoid Filtering, Kolmogorov-Smirnov Enrichment & Multi-Cluster Score Integration"]:::wideBox
+    --> H["<b>Prioritized Repurposing Candidates for HFRS Intervention</b><br/>★ Vorinostat (Score: 0.3701, FDR: 1.93e-15) — Epigenetic Attenuation of Cytokine Storm & Endothelial Stabilization<br/>★ Tretinoin (Score: 0.1582, FDR: 3.00e-08) — Overcoming Maturation Arrest & Driving Terminal NRBC Enucleation"]:::wideBox
 ```
 
 ---
