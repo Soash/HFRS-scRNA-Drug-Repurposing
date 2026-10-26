@@ -1,5 +1,10 @@
 # scRNA-seq Guided In Silico Drug Repurposing Identifies Candidate Therapeutics for Hemorrhagic Fever with Renal Syndrome 🧬💊
 
+**Author(s):** Md Abu Sadat Soash  
+**Supervisor:** Prof. Dr. Gokul Chandra Biswas  
+*Department of Genetic Engineering and Biotechnology*<br>
+*Shahjalal University of Science and Technology, Sylhet, Bangladesh*
+
 [![R](https://img.shields.io/badge/R-%3E%3D4.1.0-276DC3?style=for-the-badge&logo=r&logoColor=white)](https://www.r-project.org/)
 [![Seurat](https://img.shields.io/badge/Seurat-v5.4.0-blue?style=for-the-badge)](https://satijalab.org/seurat/)
 [![ASGARD](https://img.shields.io/badge/ASGARD-v1.0.0-orange?style=for-the-badge)](https://github.com/lanagarmire/ASGARD)
