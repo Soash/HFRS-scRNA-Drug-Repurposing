@@ -12,7 +12,7 @@
 
 ---
 
-## Abstract & Overview
+## Abstract
 
 * **Objective:** Hemorrhagic Fever with Renal Syndrome (HFRS) lacks targeted FDA-approved therapeutics. This study aims to identify novel therapeutic candidates capable of reversing the pathogenic transcriptomic signatures of HFRS, specifically targeting the abnormal presence of circulating Nucleated Red Blood Cells (NRBCs) and multilineage immune dysregulation.
 * **Methodology:** We obtained peripheral blood mononuclear cell (PBMC) single-cell RNA sequencing (scRNA-seq) data from hospitalized HFRS patients and healthy controls. Utilizing **Seurat v5** for Canonical Correlation Analysis (CCA) data integration and the **ASGARD** (A Single-cell Guided Pipeline to Aid Repurposing of Drugs) computational framework, we extracted cluster-specific differential expression profiles and queried them against the **LINCS L1000** pharmacogenomic database across hematopoietic and lymphoid lineages.
